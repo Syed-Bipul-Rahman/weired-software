@@ -24,5 +24,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('dummy', [dummyApi::class, 'index']);
 
+//retrieve data from database
+
 Route::get('animals', [AnimalController::class, 'index']);
 Route::get('plants', [PlantsController::class, 'index']);
+
+
+//store data in database
+Route::post('/animals', [AnimalController::class, 'store']);
+Route::post('/plants', [PlantsController::class, 'store']);
