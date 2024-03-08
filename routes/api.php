@@ -4,6 +4,7 @@ use App\Http\Controllers\AnimalController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dummyApi;
+use App\Http\Controllers\PlantsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('dummy', [dummyApi::class, 'index']);
 
- Route::get('animals', [AnimalController::class, 'index']);
+Route::get('animals', [AnimalController::class, 'index']);
+Route::get('plants', [PlantsController::class, 'index']);
